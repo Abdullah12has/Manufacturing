@@ -2,28 +2,27 @@ import React from 'react';
 import { ImageBackground, StyleSheet, View, Image, TextInput, Text , Button, Alert} from 'react-native';
 
 
-function WelcomeScreen(props) {
+function LoginScreen(props) {
 
     const [value, onChangeText] = React.useState('');
    
 
 
     return (
-        // <ImageBackground style={styles.background} source={require('../assets/background2.jpg')}>
            <View style={styles.inner}>
            <View style={styles.innerView}>
-                <Image style={styles.logo} source={require('../assets/factory.png')}/>
+                <Image style={styles.logo} source={require('../assets/man_logo.jpg')}/>
 
                 <View style={styles.input}>
 
-                    <Text style={styles.innerText} >Company Code </Text>
+                    <Text style={styles.innerText} >Phone Number </Text>
                      <TextInput
       style={{ height: 40, borderColor: 'white', borderWidth: 0, width: 250, marginTop: 0, borderBottomWidth: 0.6, marginBottom: 60 }}
       onChangeText={text => onChangeText(text)}
       value={value}
     />
 
-    <Button title="Next" color="#841584" onPress={() => Alert.alert('Simple Button pressed')} />
+    <Button title="Login" color="#841584" onPress={() => Alert.alert('Simple Button pressed')} />
                 </View>
 
 
@@ -66,4 +65,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default WelcomeScreen;
+export default LoginScreen;
