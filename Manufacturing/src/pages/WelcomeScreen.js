@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View, Image, TextInput, Text , Button, A:} from 'react-native';
+import { ImageBackground, StyleSheet, View, Image, TextInput, Text , Button, Alert} from 'react-native';
 
 
 function WelcomeScreen(props) {
@@ -18,7 +18,7 @@ function WelcomeScreen(props) {
 
                     <Text style={styles.innerText} >Company Code </Text>
                      <TextInput
-      style={{ height: 40, borderColor: 'black', borderWidth: 0, width: 250, marginTop: 0, borderBottomWidth: 0.6, marginBottom: 60 }}
+      style={{ height: 40, borderColor: 'white', borderWidth: 0, width: 250, marginTop: 0, borderBottomWidth: 0.6, marginBottom: 60 }}
       onChangeText={text => onChangeText(text)}
       value={value}
     />
@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
     },
     inner:{
         flex: 1,
-        backgroundColor: 'rgb(200,200,200)'
+        backgroundColor: 'rgb(0,0,0)'
     },
     input:{
         marginTop: 70
     },
     innerText:{
-        color: 'rgb(100,100,100)'
+        color: 'rgb(200,200,200)'
     }
 })
 
