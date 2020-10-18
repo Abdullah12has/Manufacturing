@@ -18,7 +18,7 @@ function WelcomeScreen(props) {
 
                     <Text style={styles.innerText} >Company Code </Text>
                      <TextInput
-      style={{ height: 40, borderColor: 'white', borderWidth: 0, width: 250, marginTop: 0, borderBottomWidth: 0.6, marginBottom: 60 }}
+      style={{ height: 40, color:'white', borderColor: 'white', borderWidth: 0, width: 250, marginTop: 0, borderBottomWidth: 0.6, marginBottom: 60 }}
       onChangeText={text => onChangeText(text)}
       value={value}
     />

@@ -28,16 +28,16 @@ function ModalTest(props) {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             
-            <TaskModal taskname={props.taskname} customer={props.customer} time={props.time} machine={props.machine}/>
+            <TaskModal taskname={props.taskname} description={props.description} customer={props.customer} time={props.time} machine={props.machine}/>
            
 
             <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
+              style={{ ...styles.openButton, backgroundColor: "#841584" }}
               onPress={() => {
                 setModalVisible(!modalVisible);
               }}
             >
-              <Text style={styles.textStyle}>Hide Modal</Text>
+              <Text style={styles.textStyle}>Close</Text>
             </TouchableHighlight>
           </View>
         </View>
@@ -84,15 +84,18 @@ const styles = StyleSheet.create({
       elevation: 5
     },
     openButton: {
-      backgroundColor: "#F194FF",
       borderRadius: 20,
-      padding: 10,
-      elevation: 2,
+      padding: 12,
+      elevation: 5,
+      paddingHorizontal: 35
     },
     textStyle: {
       color: "white",
       fontWeight: "bold",
-      textAlign: "center"
+      textAlign: "center",
+      
+
+
     },
     modalText: {
       marginBottom: 15,
