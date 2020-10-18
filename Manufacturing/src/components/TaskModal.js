@@ -1,27 +1,37 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, Modal, TouchableHighlight} from 'react-native';
 
 
-function TaskCard(props) {
+function TaskModal(props) {
     return (
+
+  
        <View style={styles.main}>
+           <View style={styles.modal} >
+
            <Text style={styles.title} >{props.taskname}</Text>
            <Text style={styles.customer} >Customer:     {props.customer}</Text>
            <Text style={styles.time} >Time:             {props.time}</Text>
            <Text style={styles.machine} >Machine:       {props.machine}</Text>
+
+           </View>
+           
        </View>
+
     );
 }
 
 const styles = StyleSheet.create({
     main:{
-        width: '90%',
-        // height: 100,
-        backgroundColor: 'white',
-        alignSelf: 'center',
-        marginVertical: 10,
-        borderRadius: 6,
-        padding: 10
+      flex: 1,
+      backgroundColor: '#000000aa'
+    },
+    modal:{
+        backgroundColor:"white",
+        margin: 30,
+        padding: 40,
+        borderRadius: 10,
+        flex:1
     },
     title:{
         fontSize: 20,
@@ -48,4 +58,4 @@ const styles = StyleSheet.create({
    
 })
 
-export default TaskCard;
+export default TaskModal;

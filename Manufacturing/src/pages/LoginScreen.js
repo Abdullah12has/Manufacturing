@@ -31,8 +31,6 @@ function LoginScreen(props) {
 
 
             </View>
-
-        // </ImageBackground>
     );
 }
 
