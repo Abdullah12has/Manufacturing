@@ -6,17 +6,17 @@ function TaskModal(props) {
     return (
 
   
-       <View style={styles.main}>
-           <View style={styles.modal} >
+
+        <View style={{flex:1}}>
 
            <Text style={styles.title} >{props.taskname}</Text>
            <Text style={styles.customer} >Customer:     {props.customer}</Text>
            <Text style={styles.time} >Time:             {props.time}</Text>
            <Text style={styles.machine} >Machine:       {props.machine}</Text>
+           
 
            </View>
-           
-       </View>
+      
 
     );
 }

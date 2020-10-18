@@ -12,7 +12,7 @@ import ModalTest from "./src/components/modalTest";
 export default function App(){
   return(
 
-    < ModalTest />
+    < TasksScreen />
       
 
   );

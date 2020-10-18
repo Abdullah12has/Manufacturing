@@ -7,6 +7,8 @@ import {
   TouchableHighlight,
   View
 } from "react-native";
+import TaskCard from "./TaskCard";
+import TaskModal from './TaskModal';
 
 function ModalTest(props) {
 
@@ -25,7 +27,9 @@ function ModalTest(props) {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Hello World!</Text>
+            
+            <TaskModal taskname={props.taskname} customer={props.customer} time={props.time} machine={props.machine}/>
+           
 
             <TouchableHighlight
               style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
@@ -39,13 +43,13 @@ function ModalTest(props) {
         </View>
       </Modal>
 
-      <TouchableHighlight
-        style={styles.openButton}
+      <TouchableHighlight style={{flex:1, width:'100%'}}
+       
         onPress={() => {
           setModalVisible(true);
         }}
       >
-        <Text style={styles.textStyle}>Show Modal</Text>
+        <TaskCard taskname={props.taskname} customer={props.customer} time={props.time} machine={props.machine}/>
       </TouchableHighlight>
     </View>
   
@@ -59,13 +63,16 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      marginTop: 22
+      marginTop: 22,
+      
     },
     modalView: {
-      margin: 20,
+      width: '80%',
+      flex:1,
+      margin: 10,
       backgroundColor: "white",
       borderRadius: 20,
-      padding: 35,
+      padding: 10,
       alignItems: "center",
       shadowColor: "#000",
       shadowOffset: {
@@ -80,7 +87,7 @@ const styles = StyleSheet.create({
       backgroundColor: "#F194FF",
       borderRadius: 20,
       padding: 10,
-      elevation: 2
+      elevation: 2,
     },
     textStyle: {
       color: "white",

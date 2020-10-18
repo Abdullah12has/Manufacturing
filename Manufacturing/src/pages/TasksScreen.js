@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView, Modal, TouchableHighlight, FlatList} from 'react-native';
+import ModalTest from '../components/modalTest';
 import TaskCard from '../components/TaskCard';
 import TaskModal from '../components/TaskModal';
 
@@ -16,15 +17,12 @@ function TasksScreen(props) {
                </Text>
            </View>
                 <ScrollView >
+                   
 
-                <TaskCard taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/>
-                <TaskCard taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/>
-                <TaskCard taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/>
-              
-                <TaskCard taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/>
-                <TaskCard taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/>
-                <TaskCard taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/>
-              
+                    <ModalTest  taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/>
+                    <ModalTest  taskname={'lalala'} customer={'everyone  '} time={'12:00 '} machine={'Machine 1'}/>
+
+
            </ScrollView>
 
            {/* <TaskModal taskname={'Task name'} customer={'Ali  '} time={'12:00 '} machine={'Machine 1'}/> */}
